@@ -23,5 +23,6 @@ language en
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
