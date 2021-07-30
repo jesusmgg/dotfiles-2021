@@ -2,6 +2,8 @@ set ideajoin
 
 set background=dark
 set number relativenumber
+set noshowmode
+set laststatus=2
 
 set visualbell
 set noerrorbells
@@ -26,3 +28,6 @@ Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
 call plug#end()
 
+let g:lightline = {
+    \ 'colorscheme': 'wombat',
+\ }
