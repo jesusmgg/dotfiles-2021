@@ -17,6 +17,8 @@ set expandtab
 set ignorecase
 set smartcase
 
+set nocompatible
+filetype plugin on
 syntax on
 
 set langmenu=en_US.UTF-8
@@ -26,6 +28,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
+Plug 'vimwiki/vimwiki'
 call plug#end()
 
 let g:lightline = {
