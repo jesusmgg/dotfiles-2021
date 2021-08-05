@@ -29,6 +29,7 @@ Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'vimwiki/vimwiki'
+Plug 'ap/vim-css-color'
 call plug#end()
 
 let g:lightline = {
