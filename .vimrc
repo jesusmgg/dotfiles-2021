@@ -3,6 +3,7 @@ source ~/.dotfiles/vimconfig/syntastic.vim
 source ~/.dotfiles/vimconfig/plug.vim
 source ~/.dotfiles/vimconfig/lightline.vim
 source ~/.dotfiles/vimconfig/nerdtree.vim
+source ~/.dotfiles/vimconfig/vimwiki.vim
 
 set ideajoin
 
