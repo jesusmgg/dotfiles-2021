@@ -2,6 +2,7 @@ source vimconfig/coc.vim
 source vimconfig/syntastic.vim
 source vimconfig/plug.vim
 source vimconfig/lightline.vim
+source vimconfig/nerdtree.vim
 
 set ideajoin
 
