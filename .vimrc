@@ -5,7 +5,7 @@ source ~/.dotfiles/vimconfig/lightline.vim
 source ~/.dotfiles/vimconfig/nerdtree.vim
 source ~/.dotfiles/vimconfig/vimwiki.vim
 
-set ideajoin
+silent! set ideajoin
 
 set background=dark
 set number relativenumber
@@ -38,7 +38,7 @@ set cul
 
 set encoding=utf-8
 set langmenu=en_US.UTF-8
-language en
+language en_US.UTF-8
 
 colorscheme darcula
 set termguicolors
