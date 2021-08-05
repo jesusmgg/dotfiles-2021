@@ -6,6 +6,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'ap/vim-css-color'
 Plug 'doums/darcula'
+Plug 'jcorbin/darkula'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-syntastic/syntastic'
 Plug 'rust-lang/rust.vim'

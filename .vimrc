@@ -41,5 +41,9 @@ set langmenu=en_US.UTF-8
 language en_US.UTF-8
 
 colorscheme darcula
+let g:darkula_emphasis=1
+let g:darkula_level=1
 set termguicolors
+
+autocmd VimEnter * call lightline#update()
 
