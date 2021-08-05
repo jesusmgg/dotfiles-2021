@@ -20,18 +20,32 @@ set smartcase
 set nocompatible
 filetype plugin on
 syntax on
+set cul
 
 set langmenu=en_US.UTF-8
 language en
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'ap/vim-css-color'
+Plug 'doums/darcula'
 call plug#end()
 
 let g:lightline = {
-    \ 'colorscheme': 'wombat',
+    \ 'colorscheme': 'darculaOriginal',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+    \ },
+    \ 'component_function': {
+    \   'gitbranch': 'FugitiveHead'
+    \ },
 \ }
+
+colorscheme darcula
+set termguicolors
+
