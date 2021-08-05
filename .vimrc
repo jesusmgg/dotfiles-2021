@@ -1,4 +1,7 @@
 source vimconfig/coc.vim
+source vimconfig/syntastic.vim
+source vimconfig/plug.vim
+source vimconfig/lightline.vim
 
 set ideajoin
 
@@ -27,35 +30,13 @@ set ignorecase
 set smartcase
 
 set nocompatible
-filetype plugin on
+filetype plugin indent on
 syntax on
 set cul
 
 set encoding=utf-8
 set langmenu=en_US.UTF-8
 language en
-
-call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
-Plug 'preservim/nerdtree'
-Plug 'itchyny/lightline.vim'
-Plug 'vimwiki/vimwiki'
-Plug 'ap/vim-css-color'
-Plug 'doums/darcula'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()
-
-let g:lightline = {
-    \ 'colorscheme': 'darculaOriginal',
-    \ 'active': {
-    \   'left': [ [ 'mode', 'paste' ],
-    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-    \ },
-    \ 'component_function': {
-    \   'gitbranch': 'FugitiveHead'
-    \ },
-\ }
 
 colorscheme darcula
 set termguicolors
