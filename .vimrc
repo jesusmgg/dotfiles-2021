@@ -1,8 +1,8 @@
-source vimconfig/coc.vim
-source vimconfig/syntastic.vim
-source vimconfig/plug.vim
-source vimconfig/lightline.vim
-source vimconfig/nerdtree.vim
+source ~/.dotfiles/vimconfig/coc.vim
+source ~/.dotfiles/vimconfig/syntastic.vim
+source ~/.dotfiles/vimconfig/plug.vim
+source ~/.dotfiles/vimconfig/lightline.vim
+source ~/.dotfiles/vimconfig/nerdtree.vim
 
 set ideajoin
 
