@@ -40,6 +40,11 @@ set encoding=utf-8
 set langmenu=en_US.UTF-8
 language en_US.UTF-8
 
+" These are to allow for different cursor shapes on VTE based terminals
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+
 colorscheme darcula
 let g:darkula_emphasis=1
 let g:darkula_level=1
