@@ -1,9 +1,11 @@
 source ~/.dotfiles/vimconfig/coc.vim
+source ~/.dotfiles/vimconfig/rust.vim
 source ~/.dotfiles/vimconfig/syntastic.vim
 source ~/.dotfiles/vimconfig/plug.vim
 source ~/.dotfiles/vimconfig/lightline.vim
 source ~/.dotfiles/vimconfig/nerdtree.vim
 source ~/.dotfiles/vimconfig/vimwiki.vim
+source ~/.dotfiles/vimconfig/remaps.vim
 
 silent! set ideajoin
 
@@ -51,4 +53,3 @@ let g:darkula_level=1
 set termguicolors
 
 autocmd VimEnter * call lightline#update()
-
