@@ -52,3 +52,8 @@ colorscheme darcula
 set termguicolors
 
 autocmd VimEnter * call lightline#update()
+
+" Read project specific .vimrc
+set exrc
+set secure
+
