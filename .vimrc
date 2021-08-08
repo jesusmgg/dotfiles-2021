@@ -6,6 +6,7 @@ source ~/.dotfiles/vimconfig/lightline.vim
 source ~/.dotfiles/vimconfig/nerdtree.vim
 source ~/.dotfiles/vimconfig/vimwiki.vim
 source ~/.dotfiles/vimconfig/remaps.vim
+source ~/.dotfiles/vimconfig/theme.vim 
 
 silent! set ideajoin
 
@@ -48,8 +49,6 @@ let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"
 
 colorscheme darcula
-let g:darkula_emphasis=1
-let g:darkula_level=1
 set termguicolors
 
 autocmd VimEnter * call lightline#update()
