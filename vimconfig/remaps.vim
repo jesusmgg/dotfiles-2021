@@ -12,7 +12,5 @@
 
 
 " Disable annoying remaps for ideavim
-:noremap <leader><leader>i :iunmap {<lt>CR><CR>
-:noremap <leader><leader>i :iunmap [<lt>CR><CR>
-:noremap <leader><leader>i :iunmap (<lt>CR><CR>
+:noremap <leader><leader>i :iunmap {<lt>CR><CR>:iunmap [<lt>CR><CR>:iunmap (<lt>CR><CR>
 
