@@ -10,7 +10,3 @@
 " Reload config
 :noremap <C-F5> :source ~/.vimrc<CR>
 
-
-" Disable annoying remaps for ideavim
-:noremap <leader><leader>i :iunmap {<lt>CR><CR>:iunmap [<lt>CR><CR>:iunmap (<lt>CR><CR>
-
