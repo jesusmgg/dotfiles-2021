@@ -8,8 +8,6 @@ source ~/.dotfiles/vimconfig/vimwiki.vim
 source ~/.dotfiles/vimconfig/remaps.vim
 source ~/.dotfiles/vimconfig/theme.vim 
 
-silent! set ideajoin
-
 set background=dark
 set number relativenumber
 set noshowmode
