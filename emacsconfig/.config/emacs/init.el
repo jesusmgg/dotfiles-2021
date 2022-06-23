@@ -1,6 +1,5 @@
 ;; Font
 (set-face-attribute 'default t :font "Comic Shanns Mono-10.5" )
-(set-face-attribute 'default nil :font "Comic Shanns Mono-10" )
 (setq-default line-spacing 0.45)
 
 ;; Set up package.el to work with MELPA
