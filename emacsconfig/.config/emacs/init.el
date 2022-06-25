@@ -7,7 +7,7 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
-(package-refresh-contents)
+; (package-refresh-contents)
 
 ;; Evil mode
 (unless (package-installed-p 'evil)
@@ -46,8 +46,8 @@
 (require 'treemacs-magit)
 (treemacs-git-mode 'deferred)
 (treemacs-filewatch-mode 1)
-(global-set-key (kbd "C-1") 'treemacs-select-window)
 (global-set-key (kbd "C-x t 1") 'treemacs-delete-other-windows)
+(global-set-key (kbd "C-1") 'treemacs-select-window)
 (global-set-key (kbd "C-x t t") 'treemacs)
 (global-set-key (kbd "C-x t d") 'treemacs-select-directory)
 
@@ -87,8 +87,15 @@
 
 
 ;; Font
-(add-to-list 'default-frame-alist
-	     '(font . "Comic Shanns Mono-10:width=regular"))
+(w32-find-non-USB-fonts)
+(setq preferred-font
+  (cond ((eq system-type 'windows-nt) "Comic Mono-10")
+	((eq system-type 'gnu/linux) "Comic Shanns Mono-10:width=regular")
+        (t nil)))
+(when preferred-font
+  (add-to-list 'default-frame-alist `(font . ,preferred-font))
+  (set-frame-font preferred-font nil t)
+)
 (setq-default line-spacing 0.45)
 
 ;; UI
