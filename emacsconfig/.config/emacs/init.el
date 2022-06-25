@@ -87,7 +87,7 @@
 
 
 ;; Font
-(w32-find-non-USB-fonts)
+;(w32-find-non-USB-fonts)
 (setq preferred-font
   (cond ((eq system-type 'windows-nt) "Comic Mono-10")
 	((eq system-type 'gnu/linux) "Comic Shanns Mono-10:width=regular")
