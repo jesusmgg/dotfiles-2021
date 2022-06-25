@@ -1,5 +1,6 @@
 .cache/
 transient/
+server/
 auto-save-list/
 elpa/
 recentf
