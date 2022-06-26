@@ -67,14 +67,21 @@
   (package-install 'adaptive-wrap))
 (require 'adaptive-wrap)
 
+;; Themes
+(unless (package-installed-p 'vs-dark-theme)
+  (package-install 'vs-dark-theme))
+(require 'vs-dark-theme)
+(load-theme 'vs-dark t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("1118168d8232a6391f2ef355f64e1121acfd1269ff46bca614b4cff4c383370d" default))
  '(package-selected-packages
-   '(adaptive-wrap visual-fill-column treemacs-magit magit on-screen good-scroll evil))
+   '(vs-dark-theme adaptive-wrap visual-fill-column treemacs-magit magit on-screen good-scroll evil))
  '(safe-local-variable-values
    '((visual-line-fringe-indicators)
      (org-startup-with-inline-images . t))))
@@ -101,7 +108,7 @@
 ;; UI
 (setq scroll-conservatively 10000)
 (global-hl-line-mode 1)
-(set-face-background hl-line-face "gray9")
+;(set-face-background hl-line-face "gray9")
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
@@ -115,3 +122,5 @@
 ;; Extra keybindings
 (global-set-key (kbd "C-x w c") 'visual-fill-column-mode)
 (global-set-key (kbd "C-x w l") 'visual-line-mode)
+
+
