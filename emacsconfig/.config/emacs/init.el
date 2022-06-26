@@ -112,6 +112,7 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
+(setq visible-bell 1)
 (setq frame-title-format "%b")
 (setq-default org-startup-with-inline-images t)
 (setq-default visual-line-fringe-indicators nil)
