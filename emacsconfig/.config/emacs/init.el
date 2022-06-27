@@ -28,6 +28,10 @@
   (package-install 'company))
 (require 'company)
 (company-mode t)
+(unless (package-installed-p 'company-posframe)
+  (package-install 'company-posframe))
+(require 'company-posframe)
+(company-posframe-mode 1)
 
 ;; Magit
 (unless (package-installed-p 'magit)
@@ -67,6 +71,22 @@
   (package-install 'adaptive-wrap))
 (require 'adaptive-wrap)
 
+;; Mixed pitch
+(unless (package-installed-p 'mixed-pitch)
+  (package-install 'mixed-pitch))
+(require 'mixed-pitch)
+(add-hook 'text-mode-hook #'mixed-pitch-mode)
+
+;; Org-appear
+(unless (package-installed-p 'org-appear)
+  (package-install 'org-appear))
+(require 'org-appear)
+
+;; org-superstar
+(unless (package-installed-p 'org-superstar)
+  (package-install 'org-superstar))
+(require 'org-superstar)
+
 ;; Themes
 (unless (package-installed-p 'vs-dark-theme)
   (package-install 'vs-dark-theme))
@@ -81,7 +101,7 @@
  '(custom-safe-themes
    '("1118168d8232a6391f2ef355f64e1121acfd1269ff46bca614b4cff4c383370d" default))
  '(package-selected-packages
-   '(vs-dark-theme adaptive-wrap visual-fill-column treemacs-magit magit on-screen good-scroll evil))
+   '(org-appear mixed-pitch vs-dark-theme adaptive-wrap visual-fill-column treemacs-magit magit on-screen good-scroll evil))
  '(safe-local-variable-values
    '((visual-line-fringe-indicators)
      (org-startup-with-inline-images . t))))
@@ -94,16 +114,31 @@
 
 
 ;; Font
-;(w32-find-non-USB-fonts)
-(setq preferred-font
-  (cond ((eq system-type 'windows-nt) "Comic Mono-10")
-	((eq system-type 'gnu/linux) "Comic Shanns Mono-10:width=regular")
-        (t nil)))
-(when preferred-font
-  (add-to-list 'default-frame-alist `(font . ,preferred-font))
-  (set-frame-font preferred-font nil t)
+(defun set-font-settings ()
+  (interactive)
+      (setq mono-font
+        (cond ((eq system-type 'windows-nt) "Comic Mono-10")
+              ((eq system-type 'gnu/linux) "Comic Shanns Mono-10:width=regular")
+              (t nil)
+        )
+      )
+      (when mono-font
+        (set-face-attribute 'default nil :font mono-font)
+        (set-face-attribute 'fixed-pitch nil :font mono-font)
+      )
+      (setq mixed-pitch-set-height t)
+      (set-face-attribute 'variable-pitch nil :font "Lato-12")
+      (set-face-attribute 'variable-pitch nil :height 1.2)
+      (setq-default line-spacing 0.45)
 )
-(setq-default line-spacing 0.45)
+(add-hook 'after-init-hook 'set-font-settings)
+(add-hook 'server-after-make-frame-hook 'set-font-settings)
+
+;; Indentation
+(setq indent-tabs-mode nil)
+(setq tab-width 2)
+(setq tab-stop-list (number-sequence 2 80 2))
+(define-key evil-insert-state-map (kbd "TAB") 'tab-to-tab-stop)
 
 ;; UI
 (setq scroll-conservatively 10000)
@@ -114,13 +149,31 @@
 (tool-bar-mode -1)
 (setq visible-bell 1)
 (setq frame-title-format "%b")
-(setq-default org-startup-with-inline-images t)
 (setq-default visual-line-fringe-indicators nil)
 (setq-default fill-column 120)
+(add-to-list 'default-frame-alist '(height . 60))
+(add-to-list 'default-frame-alist '(width . 200))
 
 (desktop-save-mode 1)
 
-;; Extra keybindings
+;; Org-mode
+(setq org-directory "~/org/"
+      org-startup-indented t
+      org-pretty-entities t
+      org-hide-emphasis-markers t
+      org-startup-with-inline-images t
+      org-image-actual-width '(300)
+      org-return-follows-link t
+)
+(setq org-src-preserve-indentation nil
+      org-src-tab-acts-natively t
+      org-edit-src-content-indentation 0
+)
+(add-hook 'org-mode-hook 'org-appear-mode)
+(setq org-superstar-special-todo-items t)
+(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
+
+;; Keybindings
 (global-set-key (kbd "C-x w c") 'visual-fill-column-mode)
 (global-set-key (kbd "C-x w l") 'visual-line-mode)
 
