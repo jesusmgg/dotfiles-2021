@@ -117,7 +117,7 @@
 (defun set-font-settings ()
   (interactive)
       (setq mono-font
-        (cond ((eq system-type 'windows-nt) "Comic Mono-10")
+        (cond ((eq system-type 'windows-nt) "Consolas-10")
               ((eq system-type 'gnu/linux) "Comic Shanns Mono-10:width=regular")
               (t nil)
         )
