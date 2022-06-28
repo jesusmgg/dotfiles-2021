@@ -186,10 +186,10 @@
 
     (custom-theme-set-faces
      'user
-     `(org-level-8 ((t (,@headline ,@variable-tuple))))
-     `(org-level-7 ((t (,@headline ,@variable-tuple))))
-     `(org-level-6 ((t (,@headline ,@variable-tuple))))
-     `(org-level-5 ((t (,@headline ,@variable-tuple))))
+     `(org-level-8 ((t (,@headline ,@variable-tuple :height 1.2))))
+     `(org-level-7 ((t (,@headline ,@variable-tuple :height 1.2))))
+     `(org-level-6 ((t (,@headline ,@variable-tuple :height 1.2))))
+     `(org-level-5 ((t (,@headline ,@variable-tuple :height 1.2))))
      `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.25))))
      `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.35))))
      `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.5))))
