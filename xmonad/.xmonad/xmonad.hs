@@ -10,7 +10,7 @@ import XMonad.Layout.NoBorders -- for fullscreen without borders
 import XMonad.Layout.Fullscreen -- fullscreen mode 
 import XMonad.Hooks.EwmhDesktops
 
-myLayout = smartBorders (ResizableTall 1 (3/100) (1/2) [] ||| Mirror (ResizableTall 1 (3/100) (3/4) []) ||| Grid ||| ThreeColMid 1 (3/100) (1/2) ||| noBorders Full ||| mouseResizableTile) 
+myLayout = ( mouseResizableTile ||| noBorders Full ) 
 
 main :: IO()
 main = xmonad $ ewmh def 
