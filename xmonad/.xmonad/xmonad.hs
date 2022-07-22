@@ -8,11 +8,12 @@ import XMonad.Layout.ThreeColumns -- for three column layout
 import XMonad.Layout.Grid -- for additional grid layout
 import XMonad.Layout.NoBorders -- for fullscreen without borders
 import XMonad.Layout.Fullscreen -- fullscreen mode 
+import XMonad.Hooks.EwmhDesktops
 
 myLayout = smartBorders (ResizableTall 1 (3/100) (1/2) [] ||| Mirror (ResizableTall 1 (3/100) (3/4) []) ||| Grid ||| ThreeColMid 1 (3/100) (1/2) ||| noBorders Full ||| mouseResizableTile) 
 
 main :: IO()
-main = xmonad $ def 
+main = xmonad $ ewmh def 
     { modMask = mod4Mask
     , terminal = "urxvt"
     , focusFollowsMouse = False
