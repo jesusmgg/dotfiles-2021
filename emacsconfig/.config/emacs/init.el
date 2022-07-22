@@ -21,3 +21,4 @@
 (global-set-key (kbd "C-S-f") 'find-grep)
 (global-set-key (kbd "M-C-l") 'indent-region)
 (global-set-key (kbd "C-S-<f5>") (lambda () (interactive) (find-file "~/.config/emacs/init.el")))
+(global-set-key (kbd "C-<f5>") (lambda () (interactive) (find-file "~/org/index.org")))
