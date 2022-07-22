@@ -18,3 +18,6 @@
 ;; Keybindings
 (global-set-key (kbd "C-x w c") 'visual-fill-column-mode)
 (global-set-key (kbd "C-x w l") 'visual-line-mode)
+(global-set-key (kbd "C-S-f") 'find-grep)
+(global-set-key (kbd "M-C-l") 'indent-region)
+(global-set-key (kbd "C-S-<f5>") (lambda () (interactive) (find-file "~/.config/emacs/init.el")))
