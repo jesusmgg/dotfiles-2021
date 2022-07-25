@@ -9,6 +9,7 @@
 (require 'my-company)
 (use-package flycheck :ensure)
 (require 'my-rust)
+(require 'my-lisp)
 (require 'my-git)
 (require 'my-treemacs)
 (require 'my-visual-settings)
