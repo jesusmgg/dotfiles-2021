@@ -12,6 +12,7 @@
 
 
 ;; Evil
+(setq evil-want-integration t)
 (setq evil-want-keybinding nil)
 (setq evil-want-C-i-jump t)
 (require 'evil)
