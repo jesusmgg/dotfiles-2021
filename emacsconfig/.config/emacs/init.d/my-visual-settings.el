@@ -14,12 +14,16 @@
 (unless (package-installed-p 'vs-dark-theme)
   (package-install 'vs-dark-theme))
 
+(unless (package-installed-p 'all-the-icons)
+  (package-install 'all-the-icons))
+
 
 ;; Settings
 (require 'visual-fill-column)
 (require 'adaptive-wrap)
 (require 'mixed-pitch)
 (require 'vs-dark-theme)
+(require 'all-the-icons)
 
 (add-hook 'text-mode-hook #'mixed-pitch-mode)
 (desktop-save-mode 0)

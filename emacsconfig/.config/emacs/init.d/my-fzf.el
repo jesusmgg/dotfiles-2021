@@ -13,8 +13,3 @@
 (setq fzf/grep-command "grep -nrH")
 (setq fzf/position-bottom t)
 (setq fzf/window-height 15)
-
-
-;; Keybindings
-(global-set-key (kbd "C-S-s") 'fzf-git-grep)
-(global-set-key (kbd "C-S-f") 'fzf-git-files)
