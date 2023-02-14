@@ -31,3 +31,5 @@ language en_US.UTF-8
 
 set termguicolors
 
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
