@@ -35,15 +35,15 @@ colors:
 # Font configuration
 font:
   normal:
-    family: JetBrains Mono
+    family: Comic Shanns Mono
     style: Regular
 
   bold:
-    family: JetBrains Mono
+    family: Comic Shanns Mono
     style: Bold
 
   italic:
-    family: JetBrains Mono
+    family: Comic Shanns Mono
     style: Italic
 
   size: 9.5
@@ -51,8 +51,8 @@ font:
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
-    x: 0
-    y: 2
+    x: 1
+    y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
@@ -60,3 +60,7 @@ font:
   glyph_offset:
     x: 0
     y: 0
+
+window:
+  decorations: full
+  startup_mode: Windowed
