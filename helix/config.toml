@@ -1,0 +1,18 @@
+theme = "darcula-solid"
+
+[editor]
+line-number = "relative"
+auto-pairs = false
+mouse = true
+cursorline = true
+idle-timeout = 50
+bufferline = "always"
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
