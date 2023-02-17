@@ -36,6 +36,7 @@ colors:
 font:
   normal:
     family: Comic Shanns Mono
+    # family: Jetbrains Mono
     style: Regular
 
   bold:
@@ -64,3 +65,6 @@ font:
 window:
   decorations: full
   startup_mode: Windowed
+
+env:
+  TERM: alacritty
