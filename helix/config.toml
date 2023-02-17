@@ -2,7 +2,7 @@ theme = "darcula-solid"
 
 [editor]
 line-number = "relative"
-auto-pairs = false
+auto-pairs = true
 mouse = true
 cursorline = true
 idle-timeout = 50
