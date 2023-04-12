@@ -40,11 +40,13 @@ font:
     style: Regular
 
   bold:
-    family: Comic Shanns Mono
+    # family: Comic Shanns Mono
+    family: Jetbrains Mono
     style: Bold
 
   italic:
-    family: Comic Shanns Mono
+    # family: Comic Shanns Mono
+    family: Jetbrains Mono
     style: Italic
 
   size: 9.5
